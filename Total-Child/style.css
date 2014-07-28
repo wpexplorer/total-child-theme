@@ -1,0 +1,13 @@
+/*
+Theme Name: Total Child
+Theme URI: http://totalwptheme.com
+Description: Total WordPress theme example child theme.
+Author: AJ Clarke
+Author URI: http://totalwptheme.com
+Template: Total
+Version: 1.0
+*/
+
+
+/** NOTE: If are or will be using the css minify function in the theme you do NOT need this import below**/
+@import url("../Total/style.css");
