@@ -14,6 +14,16 @@
  *
  */
 
+/**
+ * Load the parent style.css file
+ *
+ * @link http://codex.wordpress.org/Child_Themes
+ */
+function total_child_enqueue_parent_theme_style() {
+    wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
+}
+add_action( 'wp_enqueue_scripts', 'total_child_enqueue_parent_theme_style' );
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	- SAMPLE SNIPPETS
@@ -106,21 +116,6 @@ add_filter( 'wpex_logo_url', 'my_custom_logo_url' );
 
 
 
-/**
- * Remove admin panel sections
- *
- * @link Total/framework/redux/admin-config.php
- * @return $sections
- */
-/*
-function my_override_redux_array( $sections ) {
-    unset( $sections['5'] ); // Remove the 5th section
-    return $sections;
-}
-add_filter( 'wpex_redux_sections', 'my_override_redux_array' );
-*/
-
-
 
 /**
  * Disable custom post types completely
@@ -192,35 +187,6 @@ add_filter( 'wpex_mobile_menu_open_button_text', 'my_alter_mobile_menu_toggle' )
 
 
 /**
- * Alter the default header <title> tag
- * This just overrides the theme function - no filter
- *
- * @link Total/framework/header/meta-tags.php
- */
-/*
-function wpex_meta_title() { ?>
-     <title><?php wp_title('|'); ?></title>
-<?php }
-*/
-
-
-
-/**
- * Display memory queries on the front-end
- *
- * @link Total/framework/core-functions.php
- */
-/*
-function my_display_queries( $array ) {
-    $array['helpers']['display_queries_memory'] = true;
-    return $array;
-}
-add_filter( 'wpex_global_config', 'my_display_queries' );
-*/
-
-
-
-/**
  * Alter the default toggle bar button (plus icon)
  *
  * @link Total/framework/header/top-bar.php
@@ -257,24 +223,6 @@ add_filter( 'wpex_next_post_link_title', 'my_custom_next_post_link_title' );
 
 
 
-/**
- * Re-order the social sharing links
- *
- * @link Total/framework/social/social-share.php
- */
-/*
-function my_custom_social_sharing_sites( $array ) {
-    return array(
-        'twitter'        => 'Twitter',
-        'facebook'       => 'Facebook',
-        'google_plus'    => 'Google Plus',
-        'pinterest'      => 'Pinterest',
-        'linkedin'       => 'LinkedIn',
-    );
-}
-add_filter( 'wpex_social_sharing_sites', 'my_custom_social_sharing_sites' );
-*/
-
 
 
 /**
@@ -291,19 +239,6 @@ function add_search_to_header() { ?>
 add_filter( 'wpex_hook_main_menu_bottom', 'add_search_to_header' );
 */
 
-
-
-/**
- * Custom meta viewport
- *
- * @link Total/framework/header/meta-tags.php
- */
-/*
-function my_custom_viewport() { ?>
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-<?php }
-add_filter( 'wpex_meta_viewport', 'my_custom_viewport' );
-*/
 
 
 
@@ -333,19 +268,4 @@ function my_add_to_mobile_menu( $array ) {
 	return $array;
 }
 add_filter( 'wpex_mobile_menu_source', 'my_add_to_mobile_menu' );
-*/
-
-
-
-/**
- * How can I open the sidr Mobile menu from the right instead of the left
- *
- * @link Total/framework/scripts.php
- */
-/*
-function my_edit_localize_array( $array ) {
-    $array['sidrSide'] = 'right';
-    return $array;
-}
-add_filter( 'wpex_localize_array', 'my_edit_localize_array' );
 */
