@@ -8,4 +8,4 @@ Template: Total
 Version: 1.0
 */
 
-@import url("../Total/style.css");
+/* Parent stylesheet should be loaded from functions.php not using @import */
