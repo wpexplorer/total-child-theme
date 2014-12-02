@@ -118,24 +118,6 @@ add_filter( 'wpex_logo_url', 'my_custom_logo_url' );
 
 
 /**
- * Disable custom post types completely
- *
- * @link Total/framework/core-functions.php
- * @return $array
- */
-/*
-function my_disable_post_types( $array ) {
-    unset( $array['portfolio'] ); // Remove portfolio
-    unset( $array['staff'] ); // Remove staff
-    unset( $array['testimonials'] ); // Remove testimonials.
-    return $array; 
-}
-add_filter( 'wpex_theme_post_types', 'my_disable_post_types' );
-*/
-
-
-
-/**
  * Alter the header searchfield placeholder
  *
  * @link Total/framework/search/
