@@ -27,6 +27,8 @@ add_action( 'wp_enqueue_scripts', 'total_child_enqueue_parent_theme_style' );
 /**
  * Load translations from your child theme
  * Add your .po/.mo files into a "languages" folder in your child theme then uncomment this function
+ * 
+ * Sample Function - Uncomment to enable.
  *
  * @link http://codex.wordpress.org/Function_Reference/load_child_theme_textdomain
  * @return url
