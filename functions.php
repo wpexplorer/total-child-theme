@@ -23,19 +23,3 @@ function total_child_enqueue_parent_theme_style() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
 }
 add_action( 'wp_enqueue_scripts', 'total_child_enqueue_parent_theme_style' );
-
-/**
- * Load translations from your child theme
- * Add your .po/.mo files into a "languages" folder in your child theme then uncomment this function
- * 
- * Sample Function - Uncomment to enable.
- *
- * @link http://codex.wordpress.org/Function_Reference/load_child_theme_textdomain
- * @return url
- */
-/*
-function my_child_theme_setup() {
-    load_child_theme_textdomain( 'my_child_theme', get_stylesheet_directory() . '/languages' );
-}
-add_action( 'after_setup_theme', 'my_child_theme_setup' );
-*/
