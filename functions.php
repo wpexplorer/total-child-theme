@@ -16,8 +16,6 @@
 
 /**
  * Load the parent style.css file
- *
- * @link http://codex.wordpress.org/Child_Themes
  */
 function total_child_enqueue_parent_theme_style() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
