@@ -25,11 +25,8 @@ function total_child_enqueue_parent_theme_style() {
 	$theme   = wp_get_theme( 'Total' );
 	$version = $theme->get( 'Version' );
 
-	// Get parent style handle
-	$handle = defined( 'WPEX_THEME_STYLE_HANDLE' ) ? WPEX_THEME_STYLE_HANDLE : 'parent-style';
-
 	// Load the stylesheet
-	wp_enqueue_style( $handle, get_template_directory_uri() . '/style.css', array(), $version );
+	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css', array(), $version );
 
 }
 add_action( 'wp_enqueue_scripts', 'total_child_enqueue_parent_theme_style' );
