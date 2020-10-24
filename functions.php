@@ -25,7 +25,7 @@ function total_child_enqueue_parent_theme_style() {
 	$theme   = wp_get_theme( 'Total' );
 	$version = $theme->get( 'Version' );
 
-	// Load the stylesheet (you can use parent-style or WPEX_THEME_STYLE_HANDLE)
+	// Load the stylesheet (you can use parent-style or WPEX_THEME_STYLE_HANDLE for the $handle)
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css', array(), $version );
 
 }
