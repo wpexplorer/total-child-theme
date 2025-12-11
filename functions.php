@@ -1,7 +1,6 @@
 <?php
-/**
- * Total Child theme functions.
- */
+
+defined( 'ABSPATH' ) || exit;
 
 /**
  * Load the parent style.css file
@@ -15,8 +14,3 @@ function total_child_enqueue_parent_theme_style() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'total_child_enqueue_parent_theme_style' );
-
-/*
- * White list functions for use in Total Theme Core shortcodes.
- */
-define( 'VCEX_CALLBACK_FUNCTION_WHITELIST', array() );
