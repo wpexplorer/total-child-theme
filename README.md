@@ -2,17 +2,18 @@
 
 A blank child theme for the [Total WordPress theme](https://totalwptheme.com/). Use it to add your own CSS, PHP snippets, and template overrides without touching the parent theme, so your changes survive Total updates.
 
-## Requirements
-
-- WordPress
-- The Total theme installed (it does not need to be active — the child theme activates it as the parent)
-
 ## How to Download
 
 **[Download total-child-theme.zip](https://github.com/wpexplorer/total-child-theme/releases/latest/download/total-child-theme.zip)**
 
 > [!IMPORTANT]
 > Use the link above, not the green **Code → Download ZIP** button. GitHub names that archive after the repository *and the branch*, so you end up with a theme folder called `total-child-theme-master`. It works, but the folder name becomes your theme's directory slug and it's confusing later. The release zip is already named correctly.
+
+## Requirements
+
+- WordPress
+- The Total theme installed (it does not need to be active — the child theme activates it as the parent)
+
 
 ## Install
 
