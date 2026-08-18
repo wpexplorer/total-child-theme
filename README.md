@@ -7,7 +7,7 @@ A blank child theme for the [Total WordPress theme](https://totalwptheme.com/). 
 - WordPress
 - The Total theme installed (it does not need to be active — the child theme activates it as the parent)
 
-## Download
+## How to Download
 
 **[Download total-child-theme.zip](https://github.com/wpexplorer/total-child-theme/releases/latest/download/total-child-theme.zip)**
 
