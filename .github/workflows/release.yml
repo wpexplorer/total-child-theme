@@ -1,0 +1,28 @@
+name: Attach theme zip to release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build zip
+        run: |
+          git archive --format=zip \
+            --prefix=total-child-theme/ \
+            -o total-child-theme.zip \
+            HEAD
+
+      - name: Upload to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload "${{ github.event.release.tag_name }}" \
+            total-child-theme.zip --clobber
